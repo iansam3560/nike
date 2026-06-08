@@ -1,0 +1,257 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f3f4f6;
+    color:#111;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.search-box{
+    width:350px;
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    outline:none;
+    font-size:15px;
+}
+.nav-center{
+    flex:1;
+    text-align:center;
+}
+
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#ff6600;
+}
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url('/static/images/store_display_neon.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content{
+    max-width:800px;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:5rem;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.hero-content h2{
+    color:#ff6600;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:white;
+    color:black;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+
+.store-container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.product-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:all .3s ease;
+    width:280px;
+    display:flex;
+    flex-direction:column;
+}
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+}
+
+
+.product-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 50px rgba(0,0,0,0.18);
+}
+
+.image-wrapper{
+    height:240px;
+    background:#f8f8f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.image-wrapper img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.product-info{
+    padding:20px;
+    text-align:center;
+}
+
+.product-info h3{
+    font-size:1.1rem;
+    margin-bottom:10px;
+}
+
+.product-info h4{
+    color:#ff6600;
+    font-size:1.5rem;
+    fot-weight:800;
+}
+
+.buy-btn{
+    display:inline-block;
+    background:black;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.buy-btn:hover{
+    background:#ff6600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .hero-content h2{
+        font-size:1.3rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+}

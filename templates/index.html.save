@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="hero">
+
+<h1>Nike & Air Jordan Collection</h1>
+
+<p>
+Premium Sneakers For Champions
+</p>
+
+</div>
+
+<div class="row mt-5">
+
+{% for product in products %}
+
+<div class="col-md-3 mb-4">
+
+<div class="card product-card">
+
+
+
+
+<div class="card-body text-center">
+
+<h5>{{ product.name }}</h5>
+
+<h4 class="text-danger">
+${{ product.price }}
+</h4>
+
+<div class="d-grid gap-2">
+
+<button class="btn btn-danger">
+Add To Cart
+</button>
+
+<img src="{{ url_for('static', filename=product.image) }}"
+     alt="{{ product.name }}"
+     width="250"><button class="btn btn-dark">
+View Details
+</button>
+
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock   GNU nano 8.7.1                templates/index.html *                       
+</button>
+
+<img src="{{ url_for('static', filename=product.image) }}"
+     alt="{{ product.name }}"
+     width="250"><button class="btn btn-dark">
+View Details
+</button>
+
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+{% endblock   GNU nano 8.7.1                templates/index.html *          >
+</button>
+
+<img src="{{ url_for('static', filename=product.image) }}"
+     alt="{{ product.name }}"
+     width="250"><button class="btn btn-dark">
+View Details
+</button>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+{% enock   GNU nano 8.7.1                templates/index.html *          >
+</button>
+
+<img src="{{ url_for('static', filename=product.image) }}"
+     alt="{{ product.name }}"
+     width="250"><button class="btn btn-dark">
+View Details
+</button>
+
+
+
+
+
+</div>
+</div>
+
+</div>
+
+{% enock   GNU nano 8.7.1                templates/index.html *          >
+</button>
+
+<img src="{{ url_for('static', filename=product.image) }}"
+     alt="{{ product.name }}"
+     width="250"><button class="btn btn-dark">
+View Details
+</button>
+
+
+
+
+</div>
+</div>
+
+</div>
+
+{% enock   GNU nano 8.7.1                templates/index.html *          >
+</but>
+
+<img src="{{ url_for('static', filename=product.image) }}"
+     alt="{{ product.name }}"
+     width="250"><button class="btn btn-dark">
+View Details
+</button>
+
+
+
+
+</div>
+</div>
+
+</d

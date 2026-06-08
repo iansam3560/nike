@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike & Air Jordan Store</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NIKE & AIR JORDAN
+        </div>
+
+        <div class="nav-center">
+            <input
+                type="text"
+                placeholder="Search sneakers..."
+                class="search-box"
+            >
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <a href="/cart">Cart</a>
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>NIKE & AIR JORDAN</h1>
+
+            <h2>
+                Elevate Your Game On and Off the Court
+            </h2>
+
+            <p>
+                Discover premium sneakers, exclusive releases,
+                and the latest collections designed for
+                performance and style.
+            </p>
+
+            <a href="#products" class="hero-btn">
+                Shop Collection
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <div class="store-container" id="products">
+
+        <div class="section-title">
+
+            <h2>Featured Sneakers</h2>
+
+            <p>
+                Premium Nike and Air Jordan Collection
+            </p>
+
+        </div>
+
+        <div class="product-grid">
+
+            {% for product in products %}
+
+            <div class="product-card">
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="{{ url_for('static', filename=product.image) }}"
+                        alt="{{ product.name }}"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>{{ product.name }}</h3>
+
+                    <h4>${{ product.price }}</h4>
+
+                    <a href="{{ url_for('add_to_cart', product_id=product.id) }}"
+                       class="buy-btn">
+                        Add To Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Nike & Air Jordan Store.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
